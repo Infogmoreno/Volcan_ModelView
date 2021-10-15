@@ -1,4 +1,4 @@
-<model-viewer src="Volcan.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="poster.webp" shadow-intensity="1" animation-name="Separar" camera-orbit="90deg 76.92deg auto" camera-target="0m 0.75m 0m">
+<model-viewer src="Volcan.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="poster.webp" shadow-intensity="1" animation-name="Separar" exposure="0.52" camera-orbit="89.71deg 77.68deg auto">
 
     <div class="progress-bar hide" slot="progress-bar">
         <div class="update-bar"></div>
