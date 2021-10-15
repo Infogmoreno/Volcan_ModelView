@@ -11,7 +11,7 @@
   </head>
   <body>
     <!-- <model-viewer> HTML element -->
-    <model-viewer src="Volcan.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1" autoplay exposure="0.5" environment-image="neutral" camera-target="0m 0.8826m 0m">
+    <model-viewer src="Volcan.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1" exposure="0.51" environment-image="neutral" autoplay camera-orbit="130deg 72.35deg auto" camera-target="0m 0m 0m">
       <div class="progress-bar hide" slot="progress-bar">
           <div class="update-bar"></div>
       </div>
@@ -21,15 +21,6 @@
       <div id="ar-prompt">
           <img src="ar_hand_prompt.png">
       </div>
-      
-        <div
-    style="position: fixed; bottom: 10px; width:100%; text-align: center; z-index: 1;"
-  >
-    <button class="button" id="btn1" onclick="expandir()">expandir</button>
-    <button class="button" id="btn2" onclick="stop()">pausar</button>
-   
-  </div>
-      
     </model-viewer>  
     <script src="script.js"></script>
     <!-- Loads <model-viewer> for browsers: -->
