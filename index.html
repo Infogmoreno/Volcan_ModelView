@@ -30,7 +30,33 @@
    
   </div>
       
-    </model-viewer>  
+    </model-viewer> 
+    
+        
+ <script>
+  function expandir(){
+  //play to end or rewind if animation is at end//
+    const modelViewer = document.querySelector('#tierra');
+    modelViewer.play();
+    t=modelViewer.duration;
+    t=t*2000/2 ;// because duration is in second and time to play and rewind//
+    setTimeout(stop, t)
+    
+  }
+
+  function contraer(){
+  //play to end or rewind if animation is at end//
+    const modelViewer = document.querySelector('#tierra');
+    modelViewer.play();
+    t=modelViewer.duration;
+    t=t*-100/2 ;// because duration is in second and time to play and rewind//
+    setTimeout(stop, t);
+  }
+  function stop(){
+  const modelViewer = document.querySelector('#tierra');
+  modelViewer.pause();
+  }
+  </script>
     <script src="script.js"></script>
     <!-- Loads <model-viewer> for browsers: -->
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
