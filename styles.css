@@ -104,7 +104,7 @@ model-viewer > #ar-prompt > img {
   animation: circle 4s linear infinite;
 }
 
-.button {
+#botones {
   background-color: #D3A836;
   opacity:1	
   border: none;
