@@ -11,47 +11,54 @@
   </head>
   <body>
     <!-- <model-viewer> HTML element -->
-    <model-viewer id="volcan" src="Volcan.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1" exposure="0.51" environment-image="neutral" autoplay camera-orbit="130deg 72.35deg auto" camera-target="0m 0m 0m">
+    <model-viewer  id="volcan" src="Volcan.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="poster.webp" shadow-intensity="1">
       <div class="progress-bar hide" slot="progress-bar">
           <div class="update-bar"></div>
       </div>
-      <button slot="ar-button" id="ar-button">
-         Realidad aumentada
+      <button slot="ar-button" id="ar-button" style="z-index: 1";>
+          realidad aumentada
       </button>
       <div id="ar-prompt">
           <img src="ar_hand_prompt.png">
       </div>
       
-        <div
+    <div
     style="position: fixed; bottom: 10px; width:100%; text-align: center; z-index: 1;"
   >
-    <button class="button" id="btn1" onclick="Separar()">Separar</button>
-    <button class="button" id="btn2" onclick="stop()">Pausar</button>
+    <button class="button" id="btn1" onclick="Separar()">expandir</button>
+    <button class="button" id="btn2" onclick="stop()">pausar</button>
    
   </div>
-      
-    </model-viewer> 
-    
-   <script src="script.js"></script>
+    </model-viewer>  
+    <script src="script.js"></script>
         <!-- Loads <model-viewer> for browsers: -->
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script> 
-        
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  
+    
+    
  <script>
   function Separar(){
+  //play to end or rewind if animation is at end//
     const modelViewer = document.querySelector('#volcan');
     modelViewer.play();
     t=modelViewer.duration;
-    t=t*16000/2 ;
+    t=t*2000/2 ;// because duration is in second and time to play and rewind//
     setTimeout(stop, t)
+    
   }
 
+  function contraer(){
+  //play to end or rewind if animation is at end//
+    const modelViewer = document.querySelector('#tierra');
+    modelViewer.play();
+    t=modelViewer.duration;
+    t=t*-100/2 ;// because duration is in second and time to play and rewind//
+    setTimeout(stop, t);
+  }
   function stop(){
-  const modelViewer = document.querySelector('#volcan');
+  const modelViewer = document.querySelector('#tierra');
   modelViewer.pause();
   }
   </script>
-    <script src="script.js"></script>
-    <!-- Loads <model-viewer> for browsers: -->
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   </body>
 </html>
