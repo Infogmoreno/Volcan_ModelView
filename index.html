@@ -25,7 +25,7 @@
     <div
     style="position: fixed; bottom: 10px; width:100%; text-align: center; z-index: 1;"
   >
-    <button class="button" id="btn1" onclick="Separar()">expandir</button>
+    <button class="button" id="btn1" onclick="Separar()">Separar</button>
     <button class="button" id="btn2" onclick="stop()">pausar</button>
    
   </div>
@@ -39,10 +39,10 @@
  <script>
   function Separar(){
     const modelViewer = document.querySelector('#volcan');
-    const btn_Separar= documentquerySelector('#btn1');
+    const btn_Separar= document.querySelector('#btn1');
     modelViewer.play();
     t=modelViewer.duration;
-    t=t*2000/2 ;// because duration is in second and time to play and rewind//
+    t=t*8000/2 ;
     setTimeout(stop, t);
   }
      
