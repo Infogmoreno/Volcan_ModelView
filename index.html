@@ -11,7 +11,7 @@
   </head>
   <body>
     <!-- <model-viewer> HTML element -->
-    <model-viewer src="Volcan.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1" exposure="0.51" environment-image="neutral" autoplay camera-orbit="130deg 72.35deg auto" camera-target="0m 0m 0m">
+    <model-viewer id="volcan" src="Volcan.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1" exposure="0.51" environment-image="neutral" autoplay camera-orbit="130deg 72.35deg auto" camera-target="0m 0m 0m">
       <div class="progress-bar hide" slot="progress-bar">
           <div class="update-bar"></div>
       </div>
@@ -36,7 +36,7 @@
  <script>
   function Separar(){
   //play to end or rewind if animation is at end//
-    const modelViewer = document.querySelector('#tierra');
+    const modelViewer = document.querySelector('#volcan');
     modelViewer.play();
     t=modelViewer.duration;
     t=t*2000/2 ;// because duration is in second and time to play and rewind//
@@ -45,7 +45,7 @@
   }
 
   function stop(){
-  const modelViewer = document.querySelector('#tierra');
+  const modelViewer = document.querySelector('#volcan');
   modelViewer.pause();
   }
   </script>
