@@ -158,20 +158,4 @@ height: 60px;
 width: 55%;
 margin-left: 30px;
 }
-#botones {
-  background-color: #D3A836;
-  opacity:1	
-  border: none;
-  color: white;
-  padding: 6px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 9px;
-  margin: 6px 4px;
-  cursor: pointer;
-  border-radius: 5px;
-  border: 0px solid rgba(9, 148, 28, 0.541);
-  box-shadow: 0 0px 0px 0 rgba(0,0,0,0.2), 0 0px 0px 0 rgba(0,0,0,0.19);
-  
-}
+
