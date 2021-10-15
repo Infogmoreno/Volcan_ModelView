@@ -47,16 +47,8 @@
     
   }
 
-  function contraer(){
-  //play to end or rewind if animation is at end//
-    const modelViewer = document.querySelector('#tierra');
-    modelViewer.play();
-    t=modelViewer.duration;
-    t=t*-100/2 ;// because duration is in second and time to play and rewind//
-    setTimeout(stop, t);
-  }
   function stop(){
-  const modelViewer = document.querySelector('#tierra');
+  const modelViewer = document.querySelector('#volcan');
   modelViewer.pause();
   }
   </script>
